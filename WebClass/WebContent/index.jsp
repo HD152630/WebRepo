@@ -10,7 +10,7 @@
 <body>
 <%-- 2. JSP 주석 tag --%>
 <%-- 3. Declaration tag (선언부) --%>
-<%! private static final String DEFAULT_NAME = "Guest"; %>
+<%! private static final String DEFAULT_NAME = "New Guest"; %>
 <%
 	// 자바 코드를 그대로 작성
 	String name = request.getParameter("name");
