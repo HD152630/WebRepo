@@ -183,7 +183,7 @@
       </div>
     </div>
   </div>
-  <%@ include file="stickyfooter.jsp" %>
+  <%@ include file="footer.jsp" %>
 </body>
 
 </html>
