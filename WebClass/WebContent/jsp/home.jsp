@@ -37,7 +37,7 @@ function menu_out(e) {
   	<%@ include file="menu.jsp" %>
   	
     <%-- 세션이 없는 경우 --%>
-    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/login" method="post">Sign in</a>
+    	<a class="text-bold text-white" style="text-decoration: none" href="../login" method="post">Sign in</a>
     	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
     	<a class="text-bold text-white" style="text-decoration: none" href="">Sign up</a>
     <%-- 세션이 있는 경우 --%>
