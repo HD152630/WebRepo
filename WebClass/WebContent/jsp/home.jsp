@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="org.dimigo.vo.UserVO" %>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -37,9 +38,13 @@ function menu_out(e) {
   	<%@ include file="menu.jsp" %>
   	
     <%-- 세션이 없는 경우 --%>
+    <% UserVO user = (UserVO) session.getAttribute("user"); 
+    if(user == null){
+    %>
     	<a class="text-bold text-white" style="text-decoration: none" href="../login" method="post">Sign in</a>
     	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
     	<a class="text-bold text-white" style="text-decoration: none" href="">Sign up</a>
+    	<%} else {%>
     <%-- 세션이 있는 경우 --%>
 	    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
 	    <li class="nav-item dropdown">
@@ -54,6 +59,7 @@ function menu_out(e) {
 	      </div>
 	    </li>
 	    </ul>
+	    <%} %>
   </div>
 </nav>
 <div class="container">
