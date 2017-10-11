@@ -41,9 +41,9 @@ function menu_out(e) {
     <% UserVO user = (UserVO) session.getAttribute("user"); 
     if(user == null){
     %>
-    	<a class="text-bold text-white" style="text-decoration: none" href="../login" method="post">Sign in</a>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/login" method="post">Sign in</a>
     	<span class="text-bold text-white">&nbsp; or &nbsp;</span>
-    	<a class="text-bold text-white" style="text-decoration: none" href="">Sign up</a>
+    	<a class="text-bold text-white" style="text-decoration: none" href="/WebClass/signup">Sign up</a>
     	<%} else {%>
     <%-- 세션이 있는 경우 --%>
 	    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -52,7 +52,9 @@ function menu_out(e) {
 	    	<%=user.getName() %>님
 	      </a>
 	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-	      	<button type="submit" class="dropdown-item">Sign out</button>
+	      <form action="/WebClass/logout" method="post">
+	      	<button type="submit" class="dropdown-item"1>Sign out</button>
+	      	</form>
 	       	<div class="dropdown-divider"></div>
 	        <button type="button" class="dropdown-item">Action1</button>
 	        <button type="button" class="dropdown-item">Action2</button>

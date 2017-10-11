@@ -9,13 +9,13 @@
 <body>
 <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" onclick="fnMove('whoami')">About Me </a>
+              <a class="nav-link" href="/WebClass/session">Menu1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="fnMove('favorite')">Favorite Things</a>
+              <a class="nav-link">Menu2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="fnMove('bucketlist')">Bucket Lists</a>
+              <a class="nav-link" >Menu3</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" onclick="fnMove('signup')">Sign Up</a>
