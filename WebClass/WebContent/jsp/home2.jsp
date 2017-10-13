@@ -44,7 +44,7 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<%@ include file="menu.jsp"%>
-					<% UserVO user = (UserVO) session.getAttribute("user"); 
+					<% UserVO user = (UserVO) session.getAttribute("user");
     				if(user == null){
     				%>
 					<div class="buttons" id="login">
@@ -62,7 +62,9 @@
 	      	<button type="submit" class="dropdown-item">Sign out</button>
 	      	</form>
 	       	<div class="dropdown-divider"></div>
-	        <button type="button" class="dropdown-item">Action1</button>
+					<form class="" action="/WebClass/write">
+	        <button type="button" class="dropdown-item" >글쓰기</button>
+				</form>
 	        <button type="button" class="dropdown-item">Action2</button>
 	      </div>
 	    		</li>
