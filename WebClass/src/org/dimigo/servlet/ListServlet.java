@@ -1,7 +1,8 @@
 package org.dimigo.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,21 +10,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.dimigo.vo.UserVO;
 
 /**
- * Servlet implementation class BlogLoginServlet
+ * Servlet implementation class ListServlet
  */
-@WebServlet("/bloglogin")
-public class BlogLoginServlet extends HttpServlet {
+@WebServlet("/list")
+public class ListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BlogLoginServlet() {
+    public ListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,8 +32,15 @@ public class BlogLoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/write.jsp");
+//		ArrayList 생성 후 UserVO 객체를 담기
+		List<UserVO> list = new ArrayList<>();
+		list.add(new UserVO("aaa@naver.com", "전병현", "병원제"));
+		list.add(new UserVO("bbb@naver.com", "우원재", "사탄"));
+		list.add(new UserVO("ccc@naver.com", "아이유", "IU"));
+		
+		
+		request.setAttribute("list", list);
+		RequestDispatcher rd = request.getRequestDispatcher("jsp/list.jsp");
 		rd.forward(request, response);
 	}
 
@@ -41,9 +48,8 @@ public class BlogLoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset=utf-8");
-    
-
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

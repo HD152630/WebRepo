@@ -19,6 +19,14 @@ public class UserVO {
 	private String name;
 	private String nickname;
 
+	
+	public UserVO(){}
+	public UserVO(String id, String name, String nickname) {
+		this.id = id;
+		this.name = name;
+		this.nickname = nickname;
+	}
+	
 	public String getId() {
 		return id;
 	}
